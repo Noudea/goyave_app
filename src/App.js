@@ -19,12 +19,13 @@ import {
 } from 'react-native';
 
 import {
-  Colors,
   DebugInstructions,
   Header,
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import ActionButton from './components/atoms/buttons/ActionButton';
+import {Colors} from './styles/colors';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
@@ -75,9 +76,23 @@ const App: () => Node = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
+          <Section title="Boutons d'action">
+            <ActionButton
+              text="bouton"
+              color={Colors.secondary4}
+              onPress={() => {
+                console.log('onPress Action Button');
+              }}
+              outline={true}
+            />
+            <ActionButton
+              text="bouton"
+              color={Colors.secondary4}
+              onPress={() => {
+                console.log('onPress Action Button');
+              }}
+              outline={false}
+            />
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
