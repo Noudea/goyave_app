@@ -1,33 +1,31 @@
-import {Pressable, StyleSheet, Text} from 'react-native';
-
+import {Pressable, StyleSheet, Text, TextInput} from 'react-native';
 import Typo from '../../../styles/typo';
 import {TextColors} from '../../../styles/colors';
 
-const ActionButton = ({onPress, text, color, outline}) => {
+const VoteButton = ({outline, color, onPress}) => {
   const button = StyleSheet.create({
     container: {
-      display: 'flex',
       justifyContent: 'center',
       backgroundColor: color,
       alignItems: 'center',
-      paddingTop: 20,
-      paddingBottom: 20,
+      paddingTop: 15,
+      paddingBottom: 15,
       paddingRight: 50,
       paddingLeft: 50,
-      borderRadius: 12,
+      borderRadius: 50,
+      maxWidth: 350,
     },
   });
 
   const outlineButton = StyleSheet.create({
     container: {
-      display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      paddingTop: 20,
-      paddingBottom: 20,
+      paddingTop: 15,
+      paddingBottom: 15,
       paddingRight: 50,
       paddingLeft: 50,
-      borderRadius: 12,
+      borderRadius: 50,
       borderWidth: 1,
       borderColor: color,
     },
@@ -36,22 +34,20 @@ const ActionButton = ({onPress, text, color, outline}) => {
     },
   });
 
-  console.log(color);
-
   return (
     <>
       {outline && (
-        <Pressable style={outlineButton.container} onPress={onPress}>
-          <Text style={[Typo.infos, outlineButton.text]}>{text}</Text>
+        <Pressable onPress={onPress} style={outlineButton.container}>
+          <Text style={[Typo.subInfos, outlineButton.text]}>Outline</Text>
         </Pressable>
       )}
       {!outline && (
-        <Pressable style={button.container} onPress={onPress}>
-          <Text style={[Typo.infos, TextColors.white]}>{text}</Text>
+        <Pressable onPress={onPress} style={button.container}>
+          <Text style={[Typo.subInfos, TextColors.white]}>Not outlined</Text>
         </Pressable>
       )}
     </>
   );
 };
 
-export default ActionButton;
+export default VoteButton;

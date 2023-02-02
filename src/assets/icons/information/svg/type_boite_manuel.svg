@@ -1,0 +1,11 @@
+<svg id="gearbox_manual_icon_212334" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path id="Tracé_599" data-name="Tracé 599" d="M0,0H24V24H0Z" fill="none"/>
+  <circle id="Ellipse_196" data-name="Ellipse 196" cx="2" cy="2" r="2" transform="translate(3 4)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  <circle id="Ellipse_197" data-name="Ellipse 197" cx="2" cy="2" r="2" transform="translate(10 4)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  <circle id="Ellipse_198" data-name="Ellipse 198" cx="2" cy="2" r="2" transform="translate(17 4)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  <circle id="Ellipse_199" data-name="Ellipse 199" cx="2" cy="2" r="2" transform="translate(3 16)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  <circle id="Ellipse_200" data-name="Ellipse 200" cx="2" cy="2" r="2" transform="translate(10 16)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  <line id="Ligne_184" data-name="Ligne 184" y2="8" transform="translate(5 8)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  <line id="Ligne_185" data-name="Ligne 185" y2="8" transform="translate(12 8)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  <path id="Tracé_600" data-name="Tracé 600" d="M19,8v2a2,2,0,0,1-2,2H5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+</svg>

@@ -26,6 +26,8 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import ActionButton from './components/atoms/buttons/ActionButton';
 import {Colors} from './styles/colors';
+import VoteButton from './components/atoms/buttons/VoteButton';
+import ProjectButton from './components/atoms/buttons/ProjectButton';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
@@ -42,15 +44,7 @@ const Section = ({children, title}): Node => {
         ]}>
         {title}
       </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+      {children}
     </View>
   );
 };
@@ -94,14 +88,30 @@ const App: () => Node = () => {
               outline={false}
             />
           </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
+          <Section title={'Bouton de vote'}>
+            <VoteButton
+              onPress={() => {
+                console.log('onPress Vote Button');
+              }}
+              color={Colors.primary}
+            />
+            <VoteButton
+              onPress={() => {
+                console.log('onPress Vote Button');
+              }}
+              color={Colors.secondary2}
+              outline
+            />
           </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
+          <Section
+            style={{flex: 1, flexDirection: 'row', width: '100%'}}
+            title={'Project Boutton'}>
+            <ProjectButton
+              onPress={() => {
+                console.log('OnPress Project Button');
+              }}
+              color={Colors.primary}
+            />
           </Section>
           <LearnMoreLinks />
         </View>
@@ -114,6 +124,8 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
+    flex: 1,
+    flexDirection: 'column',
   },
   sectionTitle: {
     fontSize: 24,

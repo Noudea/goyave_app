@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="62.938" height="39.032" viewBox="0 0 62.938 39.032">
+  <defs>
+    <filter id="Tracé_404" x="0.001" y="0" width="62.798" height="31.049" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Tracé_405" x="0" y="13.435" width="62.938" height="25.597" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="noun-bus-3340663" transform="translate(-60.984 -143.292)">
+    <g transform="matrix(1, 0, 0, 1, 60.98, 143.29)" filter="url(#Tracé_404)">
+      <path id="Tracé_404-2" data-name="Tracé 404" d="M114.525,159.51c-.238-2.467-.521-4.943-.719-7.414a2.753,2.753,0,0,0-2.947-2.8h-.6a1.133,1.133,0,0,1-.643.2H73.6a1.148,1.148,0,0,1-.647-.2h-.49a2.413,2.413,0,0,0-2.458,2.4V162.34h44.8c-.085-.944-.184-1.887-.274-2.831Zm-11.574-3.739a.189.189,0,0,1-.189.193H72.985a.189.189,0,0,1-.175-.261l1.487-3.68a.189.189,0,0,1,.175-.121H102.78a.188.188,0,0,1,.189.193Zm4.943,4.943h-1.272a.292.292,0,0,1,0-.58h1.258a.292.292,0,0,1,0,.58Zm3.352-.18-4.92-4.165a.45.45,0,0,1-.144-.364l-.072-3.676a.414.414,0,0,1,.409-.359h4.619a.966.966,0,0,1,.962.867l.723,6.843a.97.97,0,0,1-1.591.84Z" transform="translate(-61 -143.29)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 60.98, 143.29)" filter="url(#Tracé_405)">
+      <path id="Tracé_405-2" data-name="Tracé 405" d="M114.918,318.154c0-.472-.058-.944-.1-1.415H69.985v1.348a2.305,2.305,0,0,0,2.188,2.377h3.761a3,3,0,0,0-.04.494,3.307,3.307,0,0,0,6.5.872,3.307,3.307,0,0,0,6.515-.849,3.222,3.222,0,0,0-.036-.449H102.1a3.307,3.307,0,1,0,6.614,0h4.044a2.136,2.136,0,0,0,2.157-2.377Zm-35.7,4.673a1.856,1.856,0,1,1,1.312-.539,1.856,1.856,0,0,1-1.312.539Zm6.38,0h0a1.86,1.86,0,1,1,1.308-.542,1.855,1.855,0,0,1-1.308.542Zm19.811-.5a1.865,1.865,0,1,1,1.314-.536,1.859,1.859,0,0,1-1.314.536Z" transform="translate(-60.98 -297.3)"/>
+    </g>
+  </g>
+</svg>
