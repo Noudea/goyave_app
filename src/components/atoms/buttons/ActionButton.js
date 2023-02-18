@@ -15,6 +15,11 @@ const ActionButton = ({onPress, text, color, outline}) => {
       paddingRight: 50,
       paddingLeft: 50,
       borderRadius: 12,
+      shadowColor: '#00000029',
+      shadowOffset: {width: 0, height: 3},
+      shadowOpacity: 1,
+      shadowRadius: 6,
+      elevation: 10,
     },
   });
 
@@ -30,13 +35,16 @@ const ActionButton = ({onPress, text, color, outline}) => {
       borderRadius: 12,
       borderWidth: 1,
       borderColor: color,
+      shadowColor: '#00000029',
+      shadowOffset: {width: 0, height: 3},
+      shadowOpacity: 1,
+      shadowRadius: 6,
+      elevation: 10,
     },
     text: {
       color: color,
     },
   });
-
-  console.log(color);
 
   return (
     <>

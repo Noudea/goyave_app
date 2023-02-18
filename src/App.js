@@ -25,9 +25,15 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import ActionButton from './components/atoms/buttons/ActionButton';
-import {Colors} from './styles/colors';
+import {BackgroundColors, Colors} from './styles/colors';
 import VoteButton from './components/atoms/buttons/VoteButton';
 import ProjectButton from './components/atoms/buttons/ProjectButton';
+import Input from './components/atoms/inputs/Input';
+import SwipeButton from './components/atoms/buttons/SwipeButton';
+import TitleIcon from './components/atoms/icons/RoundIcon';
+import MaisonIcon from './assets/icons/icon_titre/svg/maison.svg';
+import Title from './components/molecules/titles/Title';
+import TitleSection from './components/molecules/titles/SectionTitles';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
@@ -113,6 +119,37 @@ const App: () => Node = () => {
               color={Colors.primary}
             />
           </Section>
+          <Section
+            style={{flex: 1, flexDirection: 'row', width: '100%'}}
+            title={'Project Boutton'}>
+            <Input placeHolder={'Nom'} />
+            <Input placeHolder={'Email'} />
+          </Section>
+          <Section
+            style={{flex: 1, flexDirection: 'row', width: '100%'}}
+            title={'Project Boutton'}>
+            <SwipeButton />
+          </Section>
+          <Section
+            style={{flex: 1, flexDirection: 'row', width: '100%'}}
+            title={'Title Icon'}>
+            <TitleIcon icon={<MaisonIcon />} color={Colors.primary} />
+          </Section>
+          <Section
+            style={{flex: 1, flexDirection: 'row', width: '100%'}}
+            title={'Title'}>
+            <Title
+              icon={<MaisonIcon />}
+              color={Colors.primary}
+              title={'Titre simple'}
+            />
+          </Section>
+          <Section
+            style={{flex: 1, flexDirection: 'row', width: '100%'}}
+            title={'Title section'}>
+            <TitleSection icon={<MaisonIcon />} color={Colors.primary} />
+          </Section>
+
           <LearnMoreLinks />
         </View>
       </ScrollView>

@@ -18,6 +18,11 @@ const ProjectButton = ({color, onPress}) => {
       paddingLeft: 50,
       borderBottomLeftRadius: 20,
       borderBottomRightRadius: 20,
+      shadowColor: '#00000029',
+      shadowOffset: {width: 0, height: 3},
+      shadowOpacity: 1,
+      shadowRadius: 6,
+      elevation: 10,
     },
   });
   return (
