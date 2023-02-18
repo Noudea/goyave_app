@@ -1,25 +1,24 @@
 import {useState} from 'react';
 import {TextInput, StyleSheet, View} from 'react-native';
 
-const Input = ({placeHolder}) => {
-  const [text, onChangeText] = useState('');
+const Input = ({placeHolder, onChangeText, value}) => {
   return (
-    <View>
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeText}
-        placeholder={placeHolder}
-        value={text}
-        keyboardType={'default'}
-      />
-    </View>
+    <TextInput
+      style={styles.input}
+      onChangeText={onChangeText}
+      placeholder={placeHolder}
+      value={value}
+      keyboardType={'default'}
+    />
   );
 };
 
 const styles = StyleSheet.create({
   input: {
-    height: 40,
-    margin: 12,
+    width: '100%',
+    height: 47,
+    marginTop: 10,
+    marginBottom: 10,
     padding: 10,
     backgroundColor: '#f4f5f3',
     borderRadius: 10,
