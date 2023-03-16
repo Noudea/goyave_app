@@ -1,14 +1,34 @@
-import {ImageBackground, StyleSheet, Text, View} from 'react-native';
+import {
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import backgroundImage from '../assets/images/pexels-photo-1056497.jpeg';
 import Input from '../components/atoms/inputs/Input';
 import {useState} from 'react';
 import ActionButton from '../components/atoms/buttons/ActionButton';
 import {Colors} from '../styles/colors';
+import {useNavigation} from '@react-navigation/native';
+import {useAuth} from '../providers/AuthProvider';
 
 const LoginScreen = () => {
+  const authContext = useAuth();
+  console.log('authContext', authContext);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  let navigation = useNavigation();
+  const handlePress = () => {
+    navigation.navigate('forgotPassword');
+  };
 
+  const handleLogin = () => {
+    console.log('coucou');
+    authContext.login(email, password);
+    //TODO implement login
+  };
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -75,14 +95,17 @@ const LoginScreen = () => {
         <View style={styles.inputContainer}>
           <Input onChangeText={setEmail} value={email} placeHolder="Email" />
           <Input
+            secured={true}
             onChangeText={setPassword}
             value={password}
             placeHolder="Mot de passe"
           />
-          <Text style={styles.forgotPassword}>Mot de passe oublié ?</Text>
+          <TouchableOpacity onPress={handlePress}>
+            <Text style={styles.forgotPassword}>Mot de passe oublié ?</Text>
+          </TouchableOpacity>
           <View style={styles.buttonContainer}>
             <ActionButton
-              onPress={() => console.log('coucou')}
+              onPress={handleLogin}
               text={'Connexion'}
               color={Colors.primary}
               outline={false}

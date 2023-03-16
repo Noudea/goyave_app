@@ -10,6 +10,7 @@ const Colors = {
   error: '#B00020',
   white: '#FFFFFF',
   black: '#000000',
+  grey: '#d6dbe8',
 };
 
 const TextColors = StyleSheet.create({

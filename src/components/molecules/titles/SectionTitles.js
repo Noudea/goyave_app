@@ -2,13 +2,13 @@ import {Text, View} from 'react-native';
 import TitleIcon from '../../atoms/icons/RoundIcon';
 import Typo from '../../../styles/typo';
 
-const TitleSection = ({icon, color}) => {
+const TitleSection = ({title, subtitle, icon, color}) => {
   return (
     <View style={styles.container}>
       <TitleIcon icon={icon} color={color} />
       <View style={styles.titleSectionContainer}>
-        <Text style={[Typo.screenTitle, {color: color}]}>title section</Text>
-        <Text style={[Typo.subSectionTitle]}>Subtitle</Text>
+        <Text style={[Typo.screenTitle, {color: color}]}>{title}</Text>
+        <Text style={[Typo.subSectionTitle]}>{subtitle}</Text>
       </View>
     </View>
   );
@@ -16,7 +16,6 @@ const TitleSection = ({icon, color}) => {
 
 const styles = {
   container: {
-    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
   },

@@ -3,11 +3,12 @@ import {Colors} from '../../../styles/colors';
 import Typo from '../../../styles/typo';
 import {useState} from 'react';
 
-const SwipeButton = () => {
-  const [active, setActive] = useState(false);
+const SwipeButton = ({action, propose}) => {
+  const [active, setActive] = useState(propose);
 
   const onPress = () => {
     setActive(!active);
+    action();
   };
 
   return (
