@@ -1,4 +1,4 @@
-import {Pressable, StyleSheet, Text} from 'react-native';
+import {Pressable, StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 import Typo from '../../../styles/typo';
 import {TextColors} from '../../../styles/colors';
@@ -49,14 +49,14 @@ const ActionButton = ({onPress, text, color, outline}) => {
   return (
     <>
       {outline && (
-        <Pressable style={outlineButton.container} onPress={onPress}>
+        <TouchableOpacity style={outlineButton.container} onPress={onPress}>
           <Text style={[Typo.infos, outlineButton.text]}>{text}</Text>
-        </Pressable>
+        </TouchableOpacity>
       )}
       {!outline && (
-        <Pressable style={button.container} onPress={onPress}>
+        <TouchableOpacity style={button.container} onPress={onPress}>
           <Text style={[Typo.infos, TextColors.white]}>{text}</Text>
-        </Pressable>
+        </TouchableOpacity>
       )}
     </>
   );

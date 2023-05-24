@@ -1,9 +1,9 @@
-import {ImageBackground, Text, View} from 'react-native';
-import backgroundImage from '../../../assets/images/pexels-photo-1267706.jpeg';
+import {ImageBackground, Text, TouchableOpacity, View} from 'react-native';
 import {Colors} from '../../../styles/colors';
+import {useState} from 'react';
 
 const DestinationCard = ({title, price, image, vote}) => {
-  const active = false;
+  const [active, setActive] = useState(false);
 
   return (
     <View
@@ -13,6 +13,7 @@ const DestinationCard = ({title, price, image, vote}) => {
         height: 229,
         borderRadius: 20,
         borderWidth: active ? 1 : 0,
+        borderColor: Colors.primary,
       }}>
       <ImageBackground
         style={{
@@ -61,24 +62,33 @@ const DestinationCard = ({title, price, image, vote}) => {
               {price} €
             </Text>
           </View>
-          <View
+          <TouchableOpacity
+            onPress={() => setActive(!active)}
             style={{
               position: 'relative',
               bottom: -20,
               borderRadius: 10,
-              backgroundColor: Colors.primary,
+              backgroundColor: active ? Colors.white : Colors.primary,
               justifyContent: 'center',
               alignItems: 'center',
               paddingVertical: 5,
+              borderWidth: active ? 1 : 0,
+              borderColor: Colors.primary,
             }}>
             <Text
               style={{
-                color: Colors.white,
+                color: active ? Colors.primary : Colors.white,
                 fontSize: 13,
               }}>
-              {vote ? 'Voter' : 'Proposer'}
+              {vote
+                ? active
+                  ? 'Annuler'
+                  : 'Voter'
+                : active
+                ? 'Annuler'
+                : 'Proposer'}
             </Text>
-          </View>
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     </View>

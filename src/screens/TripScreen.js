@@ -46,7 +46,7 @@ const TripScreen = () => {
         }}>
         <View
           style={{
-            flex: 0.8,
+            flex: 1,
           }}>
           <Text
             style={{
@@ -57,12 +57,6 @@ const TripScreen = () => {
             Voyage été 2023
           </Text>
           <Text>6 juin au 9 juin</Text>
-        </View>
-        <View
-          style={{
-            flex: 0.2,
-          }}>
-          <Text>Left</Text>
         </View>
       </View>
       <View
@@ -165,6 +159,9 @@ const TripScreen = () => {
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('location');
+            }}
             style={{
               flexDirection: 'column',
               justifyContent: 'space-between',
@@ -234,6 +231,7 @@ const TripScreen = () => {
           title={'Voiture'}
           infos={'3 jours'}
           price={1500}
+          link={'location'}
         />
         <View
           style={{

@@ -15,8 +15,8 @@ const AuthenticatedStack = () => {
 
     <Tab.Navigator
       initialRouteName="Mes Voyages"
-      tabBarOptions={{
-        activeTintColor: '#e91e63',
+      screenOptions={{
+        tabBarActiveTintColor: '#e91e63',
         labelStyle: {fontSize: 12},
         showIcon: true,
       }}>

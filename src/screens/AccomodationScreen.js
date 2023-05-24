@@ -23,6 +23,7 @@ import Hotel1Image from '../assets/images/hotel1.png';
 import Hotel2Image from '../assets/images/hotel2.jpeg';
 import Hotel3Image from '../assets/images/hotel3.png';
 import Hotel4Image from '../assets/images/hotel4.png';
+import HotelIcon from '../assets/icons/icon_titre/svg/maison.svg';
 
 const AccommodationScreen = () => {
   const [propose, setPropose] = useState(false);
@@ -38,7 +39,7 @@ const AccommodationScreen = () => {
           padding: 20,
         }}>
         <SectionTitles
-          icon={<DestinationIcon />}
+          icon={<HotelIcon />}
           title="Voyage été 2023"
           subtitle="Où se loger ?"
           color={Colors.primary}

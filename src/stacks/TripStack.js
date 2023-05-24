@@ -5,6 +5,7 @@ import DestinationScreen from '../screens/DestinationScreen';
 import AccommodationScreen from '../screens/AccomodationScreen';
 import SpendingScreen from '../screens/SpendingScreen';
 import TransportScreen from '../screens/TransportScreen';
+import LocationScreen from '../screens/LocationScreen';
 
 const TripStack = () => {
   const Stack = createNativeStackNavigator();
@@ -40,6 +41,11 @@ const TripStack = () => {
         options={{headerShown: false}}
         name="transport"
         component={TransportScreen}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        name="location"
+        component={LocationScreen}
       />
       {/*<Stack.screen*/}
       {/*  options={{headerShown: false}}*/}
