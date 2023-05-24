@@ -16,25 +16,19 @@ Pour lancer le projet, suivez les étapes ci-dessous :
 4. Exécutez la commande suivante pour installer les dépendances :
 
 ```
-shellCopy code
 yarn install
-
 ```
 
 1. Pour lancer l'application sur iOS, exécutez la commande suivante :
 
 ```
-shellCopy code
 yarn run ios
-
 ```
 
 1. Pour lancer l'application sur Android, exécutez la commande suivante :
 
 ```
-shellCopy code
 yarn run android
-
 ```
 
 ## **Stack technique :**
